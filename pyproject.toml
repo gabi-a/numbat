@@ -7,6 +7,7 @@ requires-python = ">=3.11"
 dependencies = [
     "syncboard",
     "SynthNVProDriver",
+    "atik-python-sdk",
 ]
 
 [build-system]
@@ -19,3 +20,4 @@ where = ["src"]
 [tool.uv.sources]
 syncboard = { path = "sync_board", editable = true }
 SynthNVProDriver = { path = "SynthNVProDriver", editable = true }
+atik-python-sdk = { path = "vendor/atik/Atik_Python_SDK-1.5.1-py3-none-any.whl" }

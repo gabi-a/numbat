@@ -6,3 +6,6 @@ __pycache__/
 # Sibling hardware repos: separate git repos, cloned alongside (see README)
 /sync_board/
 /SynthNVProDriver/
+
+# Vendored Atik SDK binaries (see README)
+/vendor/
