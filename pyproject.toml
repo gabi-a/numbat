@@ -1,0 +1,21 @@
+[project]
+name = "numbat"
+version = "0.1.0"
+description = "Software to run the NuMBAT experiment."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "syncboard",
+    "SynthNVProDriver",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.uv.sources]
+syncboard = { path = "sync_board", editable = true }
+SynthNVProDriver = { path = "SynthNVProDriver", editable = true }
