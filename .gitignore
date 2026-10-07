@@ -4,8 +4,8 @@ __pycache__/
 .DS_Store
 
 # Sibling hardware repos: separate git repos, cloned alongside (see README)
-/sync_board/
-/SynthNVProDriver/
+/drivers/sync_board/
+/drivers/SynthNVProDriver/
 
 # Vendored Atik SDK binaries (see README)
 /vendor/

@@ -6,11 +6,11 @@ Software to run the NuMBAT experiment.
 
 Requires [uv](https://docs.astral.sh/uv/). The hardware drivers live in their own
 repos and are installed into the environment as editable local packages, so clone
-them inside this folder:
+them into `drivers/`:
 
 ```sh
-git clone https://github.com/kmpape/sync_board.git
-git clone https://github.com/gabi-a/SynthNVProDriver.git
+git clone https://github.com/kmpape/sync_board.git drivers/sync_board
+git clone https://github.com/gabi-a/SynthNVProDriver.git drivers/SynthNVProDriver
 uv sync
 ```
 

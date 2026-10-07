@@ -34,8 +34,8 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "atik-python-sdk", path = "vendor/atik/Atik_Python_SDK-1.5.1-py3-none-any.whl" },
-    { name = "syncboard", editable = "sync_board" },
-    { name = "synthnvprodriver", editable = "SynthNVProDriver" },
+    { name = "syncboard", editable = "drivers/sync_board" },
+    { name = "synthnvprodriver", editable = "drivers/SynthNVProDriver" },
 ]
 
 [[package]]
@@ -208,7 +208,7 @@ wheels = [
 [[package]]
 name = "syncboard"
 version = "2.0.0"
-source = { editable = "sync_board" }
+source = { editable = "drivers/sync_board" }
 dependencies = [
     { name = "pyserial" },
 ]
@@ -226,7 +226,7 @@ notebook = [
 [[package]]
 name = "synthnvprodriver"
 version = "0.1.0"
-source = { editable = "SynthNVProDriver" }
+source = { editable = "drivers/SynthNVProDriver" }
 dependencies = [
     { name = "pyserial" },
 ]

@@ -18,6 +18,6 @@ build-backend = "setuptools.build_meta"
 where = ["src"]
 
 [tool.uv.sources]
-syncboard = { path = "sync_board", editable = true }
-SynthNVProDriver = { path = "SynthNVProDriver", editable = true }
+syncboard = { path = "drivers/sync_board", editable = true }
+SynthNVProDriver = { path = "drivers/SynthNVProDriver", editable = true }
 atik-python-sdk = { path = "vendor/atik/Atik_Python_SDK-1.5.1-py3-none-any.whl" }
