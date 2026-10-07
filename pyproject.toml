@@ -8,6 +8,7 @@ dependencies = [
     "syncboard",
     "SynthNVProDriver",
     "atik-python-sdk",
+    "matplotlib>=3.8",
 ]
 
 [build-system]

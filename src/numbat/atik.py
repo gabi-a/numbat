@@ -17,6 +17,25 @@ if (_LIB_DIR / "libatikcameras.so").exists():
     if str(_LIB_DIR) not in _paths:
         os.environ["LD_LIBRARY_PATH"] = os.pathsep.join([str(_LIB_DIR), *filter(None, _paths)])
 
+import numpy as np  # noqa: E402
+
 import AtikSDK  # noqa: E402
+
+
+class _NumpyCompat:
+    """numpy with the binary-mode ``fromstring`` that numpy >= 2.3 removed.
+
+    AtikSDK 1.5.1 uses ``np.fromstring`` to decode image buffers.
+    """
+
+    def __getattr__(self, name):
+        return getattr(np, name)
+
+    @staticmethod
+    def fromstring(string, dtype=float, count=-1):
+        return np.frombuffer(string, dtype=dtype, count=count).copy()
+
+
+AtikSDK.np = _NumpyCompat()
 
 __all__ = ["AtikSDK"]
