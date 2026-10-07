@@ -14,6 +14,7 @@ from numbat.atik import AtikSDK
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--exposure", type=float, default=0.1, help="exposure time in seconds")
+    parser.add_argument("--save", metavar="PNG", help="save the figure to this file instead of showing it")
     args = parser.parse_args()
 
     probe = AtikSDK.AtikSDKCamera()
@@ -47,7 +48,10 @@ def main():
         ax.set_title(f"[{i}] {name}")
         fig.colorbar(im, ax=ax, fraction=0.046)
     fig.tight_layout()
-    plt.show()
+    if args.save:
+        fig.savefig(args.save, dpi=100)
+    else:
+        plt.show()
 
 
 if __name__ == "__main__":
