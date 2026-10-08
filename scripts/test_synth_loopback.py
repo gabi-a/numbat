@@ -37,6 +37,7 @@ def main():
 
     with SynthNVPro.connect(args.port, max_power_dbm=args.power) as synth:
         print(f"{synth.info()}")
+        synth.disable()  # the device may boot with its output on; start from a known-off state
         synth.set_frequency(float(freqs[0]))
         synth.set_power(args.power)
         synth.enable()
