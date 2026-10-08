@@ -856,7 +856,7 @@ notebook = [
 
 [[package]]
 name = "synthnvprodriver"
-version = "0.1.0"
+version = "0.2.0"
 source = { editable = "drivers/SynthNVProDriver" }
 dependencies = [
     { name = "pyserial" },
@@ -864,3 +864,6 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [{ name = "pyserial", specifier = ">=3.5" }]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pytest", specifier = ">=8" }]
